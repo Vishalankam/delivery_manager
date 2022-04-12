@@ -1,4 +1,4 @@
-from main import offers
+from . import offers
 from . import *
 
 

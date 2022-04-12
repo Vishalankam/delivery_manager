@@ -1,5 +1,5 @@
 import unittest
-from ..Discount import Discount
+from ..models.Discount import Discount
 
 
 class TestDiscount(unittest.TestCase):

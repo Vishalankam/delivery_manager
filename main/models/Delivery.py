@@ -1,8 +1,8 @@
 from . import offers
 from main.utils.helper import input_pkg_details, input_delivery_info, input_vehicle_details
 from . import *
-from main.Discount import Discount
-from main.Eta import Eta
+from main.models.Discount import Discount
+from main.models.Eta import Eta
 
 """ Delivery """
 

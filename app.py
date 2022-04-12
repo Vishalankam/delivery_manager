@@ -1,6 +1,6 @@
-from main.Delivery import Delivery
+from main.models.Delivery import Delivery
 from main.utils.logger import log_details, log_exception
-from main.Eta import Eta
+from main.models.Eta import Eta
 
 
 def run():

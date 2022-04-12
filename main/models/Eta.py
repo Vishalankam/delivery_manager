@@ -17,7 +17,7 @@ class Eta():
     def get_sort_key(self, obj):
         return obj[KEY_FOR_SORTING_ETA]
 
-    def calculate_eta_of_vehicle_and_pkg(self, pkg_count, vehicle_away_for):
+    def calculate_eta_of_vehicle_and_pkg(self, pkg_count, vehicle_away_for, eta_of_vehicle):
         self.pkg_details[pkg_count][ETA_OF_PKG] = float("{:.2}".format(
             self.pkg_details[pkg_count][DISTANCE] / self.speed_of_vehicle))
         self.pkg_details[pkg_count][ETA_OF_PKG] = self.pkg_details[pkg_count][ETA_OF_PKG] + \
@@ -62,7 +62,7 @@ class Eta():
                     weights = temp
                     no_of_pkg_to_load = no_of_pkg_to_load + 1
                     eta_of_vehicle = self.calculate_eta_of_vehicle_and_pkg(
-                        pkg_count, vehicle_away_for)
+                        pkg_count, vehicle_away_for, eta_of_vehicle)
                     pkg_count = pkg_count+1
                     if not pkg_count < pkg_remained:
                         break
