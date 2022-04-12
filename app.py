@@ -1,11 +1,14 @@
-from main.Discount import Discount
+from main.Delivery import Delivery
 from main.utils.logger import log_details, log_exception
+from main.Eta import Eta
+
 
 def run():
     try:
-        dis = Discount()
-        output_pkg_details = dis.pkg_delivery()
-        log_details("", "run", output_pkg_details)
+        delivery = Delivery()
+        output = delivery.pkg_delivery()
     except Exception as e:
-        log_exception("", "run", "Exception: {}".format(e))
+        log_exception("", "run", "EXCEPTION :{}".format(e))
+
+
 run()
